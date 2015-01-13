@@ -1,0 +1,22 @@
+{
+  "name": "table-lib",
+  "version": "0.0.0",
+  "description": "Backbone library to create and manipulate html tables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Backbone",
+    "table",
+    "html",
+    "generate"
+  ],
+  "author": "Tobias Buchmann <mail@tobi-or-not.de>",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.8.4",
+    "underscore": "^1.7.0"
+  },
+  "private": true
+}
