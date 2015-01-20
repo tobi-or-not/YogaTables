@@ -1,5 +1,5 @@
 {
-  "name": "table-lib",
+  "name": "yoga-tables",
   "version": "0.0.0",
   "description": "Backbone library to create and manipulate html tables",
   "main": "index.js",

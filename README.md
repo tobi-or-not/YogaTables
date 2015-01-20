@@ -1,6 +1,6 @@
 # Backbone Tables
 
-Disclaimer: This package comes out of a browserfiy project and has not been used or tested with anything else (yet).
+Disclaimer: This package comes out of a browserify project and has not been used or tested with anything else (yet).
 
 Backbone Tables can be used to dynamically create html tables within a Backbone project. The project comprises three components:
 
@@ -13,7 +13,7 @@ Backbone Tables can be used to dynamically create html tables within a Backbone 
 - [1. Usage](#usage)
 	- [1.0 The Template](#the-template)
 	- [1.1 Generating a Table](#generate-table)
-	- [1.2 Making a Table sortable](#sort-table)
+	- [1.2 Making a Table Sortable](#sort-table)
 - [2. Advanced](#advanced)
 	- [Defining columns](#display-columns)
 	- [Formatters](#formatters)
@@ -40,7 +40,7 @@ var teaCollection = new Backbone.Collection([
 ]);
 ```
 
-Include the table-lib and the _table_template into a view
+Include the table-lib and the template into a view
 
 ```
 var Table = require('table-lib').Table;
@@ -76,7 +76,7 @@ render: function() {
 ```
 
 <a name="sort-table"></a>
-### 2. Making a Table sortable
+### 2. Making a Table Sortable
 Sorting tables is accomplished by sorting the underlying collection. To augment a standard `Backbone.Collection`, sort-mixin needs to be mixed in.
 
 **Collection**
@@ -184,3 +184,4 @@ If more complex data structures are needed, or additional markup (for example li
 ## TODO
 * implement translation function
 * implement filtering
+* support nested attributes
