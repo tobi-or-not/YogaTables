@@ -1,4 +1,4 @@
-# Backbone Tables
+# YogaTables for Backbone
 
 Disclaimer: This package comes out of a browserify project and has not been used or tested with anything else (yet).
 
