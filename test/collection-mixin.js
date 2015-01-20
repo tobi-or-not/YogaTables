@@ -21,7 +21,12 @@ describe('getSortState()', function() {
   it('should return an object that contains certain fields', function() {
     var keys = Object.keys(mixin.getSortState());
     expect(keys).to.include.members(['direction', 'attribute']);
+  });
 
+  it('should have the right values', function() {
+    col.updateOrder('name', 'desc');
+    expect(col.getSortState().direction).to.equal('desc');
+    expect(col.getSortState().attribute).to.equal('name');
   });
 });
 
@@ -86,4 +91,41 @@ describe('comparator()', function() {
     col.sortDirection = 'desc';
     expect(col.comparator(m1, m2)).to.equal(1, 'age, desc');
   });
+
+  it('should work with nested attributes', function() {
+    var m1 = new Backbone.Model({name: 'Asbach', age: 12});
+    var nested1 = new Backbone.Model({origin: 'Germany', foundet: 1982});
+    m1.set({nested: nested1});
+
+
+    var m2 = new Backbone.Model({name: 'Uralt', age: 30});
+    var nested2 = new Backbone.Model({origin: 'USA', foundet: 2000});
+    m2.set({nested: nested2});
+
+    col.sortAttribute = 'nested.origin';
+    col.sortDirection = 'asc';
+    expect(col.comparator(m1, m2)).to.equal(-1, 'nested.origin, asc');
+
+    col.sortDirection = 'desc';
+    expect(col.comparator(m1, m2)).to.equal(1, 'nested.origin, desc');
+
+    col.sortAttribute = 'nested.foundet';
+    col.sortDirection = 'asc';
+    expect(col.comparator(m1, m2)).to.equal(-1, 'nested.foundet, asc');
+
+    col.sortDirection = 'desc';
+    expect(col.comparator(m1, m2)).to.equal(1, 'nested.foundet, desc');
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
