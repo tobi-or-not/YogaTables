@@ -184,4 +184,6 @@ If more complex data structures are needed, or additional markup (for example li
 ## TODO
 * implement translation function
 * implement filtering
-* support nested attributes
+* write up hack for nested fields 
+= Done =  
+* make comparator work with `undefined` values
