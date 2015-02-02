@@ -2,9 +2,9 @@
 module.exports = exports = {};
 
 var Table = require('./lib/view-lib');
-var collectionMixin = require('./lib/collection-mixin');
+var collectionSort = require('./lib/collection-sort');
+var collectionFilter = require('./lib/collection-filter');
 
 exports.Table = Table;
-exports.collectionMixin = collectionMixin;
-
-
+exports.collectionSort = collectionSort;
+exports.collectionFilter = collectionFilter;
